@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LAM-Macedo DAP PIF 2020-21</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bulma.min.css') }}" />
+    <style>
+    svg {
+  height: 40vh;
+  width: 40vw;
+}
+
+.st0, .st1, .st2, .st3 {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 42;
+  stroke-miterlimit: 10;
+}
+
+.st0 {
+  stroke-dasharray: 12.1947, 12.1947, 12.1947, 12.1947, 12.1947, 12.1947;
+}
+
+.st1 {
+  stroke-dasharray: 50, 90, 200, 30, 40, 0;
+}
+
+.st2 {
+  stroke-linecap: square;
+  stroke-dasharray: 120, 20, 110, 20, 140;
+}
+
+.st3 {
+  stroke-width: 16;
+  stroke-linecap: square;
+}
+
+ 
+    </style>
+
+</head>
+
+<body>
+    <section class="hero is-dark is-fullheight">
+
+            <nav class="navbar is-primary">
+                    <div class="container">
+                    <div class="navbar-brand">
+                          <a class="navbar-item" href="{{ url_for('index') }}"
+                            style="font-weight:bold;">PIF 2020-21</a>
+                          <span class="navbar-burger burger" data-target="navMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </span>
+                        </div>
+                    <div id="navMenu" class="navbar-menu">
+                            <div class="navbar-end">
+                                    <a class="navbar-item" href="{{ url_for('index') }}">Home</a>
+                                    <a class="navbar-item" href="{{ url_for('system') }}">System</a>
+                                    <a class="navbar-item" href="{{ url_for('sensor') }}">Sensor</a>
+                                    <a class="navbar-item" href="{{ url_for('history') }}">History</a> 
+                                </div>
+                                  
+                    </div>
+                    </div>
+                    </nav>
+        <div class="hero-body">
+            <div class="container has-text-centered">
+               {% block content %}
+               {% endblock %}
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        (function() {
+          var burger = document.querySelector('.burger');
+          var nav = document.querySelector('#'+burger.dataset.target);
+          burger.addEventListener('click', function(){
+            burger.classList.toggle('is-active');
+            nav.classList.toggle('is-active');
+          });
+        })();
+      </script>
+</body>
+
+</html>

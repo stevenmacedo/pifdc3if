@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+<h1 class="title">Sensor Informations</h1>
+<h2 class="subtitle">All the Informations about the Sensors</h2>
+<hr>
+<div id="panel">
+<p class="lead">{{Temperatur}}°</p>
+  </div>
+  <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow={{cpu}} aria-valuemin="0" aria-valuemax="100" style="width:{{ cpu }}%"></div>
+      </div>
+  <hr>
+  <div id="panel">
+<p class="lead">{{Feuchte}}</p>
+  </div>
+  <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow={{ram}} aria-valuemin="0" aria-valuemax="100" style="width:{{ ram }}%"></div>
+  </div>
+  <hr>
+<div id="panel">
+<p class="lead">{{Luftdruck}}</p>
+  </div>
+  <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow={{freespace}} aria-valuemin="0" aria-valuemax="100" style="width:{{ freespace }}%"></div>
+      </div>
+  <hr>
+  <div id="panel">
+<p class="lead">{{Lichtstaerke}}</p>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow={{freespace}} aria-valuemin="0" aria-valuemax="100" style="width:{{ freespace }}%"></div>
+        </div>
+    <hr>
+
+
+<p>Developed in <strong>2020</strong> by <strong>Steven Macedo</strong></p>
+<script type="text/javascript">
+  setTimeout(function () { location.reload(true); }, 5000);
+</script>
+{% endblock %}
