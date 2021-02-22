@@ -644,4 +644,4 @@ if __name__ == "__main__":
 	processSensor3.start()
 	processSensor2 = Process(target=updateDb)
 	processSensor2.start()
-	app.run(host='0.0.0.0',port=80, threaded=True, debug=True)
+	app.run(host='0.0.0.0',port=80, threaded=True)
