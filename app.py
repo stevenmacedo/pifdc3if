@@ -607,6 +607,10 @@ def updateDb(Sensor=Sensor, db=db):
 def index():
 	return render_template('index.html')
 
+@app.route('/aboutus')
+def aboutus():
+	return render_template('aboutus.html')
+
 
 @app.route('/system')
 def system():
@@ -640,4 +644,4 @@ if __name__ == "__main__":
 	processSensor3.start()
 	processSensor2 = Process(target=updateDb)
 	processSensor2.start()
-	app.run(host='192.60.28.113', port='80', threaded=True, debug=False)
+	app.run(host='0.0.0.0',port=80, threaded=True, debug=True)

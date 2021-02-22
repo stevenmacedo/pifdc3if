@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Paysagiste, innovations et fleurs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <main>
+        <div id="mySidenav">
+            <a href="#welcomecontainer" id="welcome">Welcome  <i class="fas fa-home"></i></a>
+            <a href="#logocontainer" id="logo">Logo</a>
+            <a href="#lgkcontainer" id="lgk">LGK</a>
+            <a href="#lamcontainer" id="lam">LAM</a>
+            <a href="{{ url_for('index') }}" id="sensors">Sensors</a>
+          </div>
+        <div id="welcomecontainer"></div>
+        <h1>Welcome</h1>
+        <div class="blog">
+            <img src="{{ url_for('static', filename='future_hub_logo.png') }}" alt="Logo">
+            <div class="article">
+                <h2>Welcome to PIF: Paysagiste, Innovations et Fleurs</h1>
+                <p>This is our brandnew Site, Feel free to send us an eMail</p>
+                <a href="mailto:zerst078@school.lu">Click Here!</a>
+        </div>
+        </div>
+        <br>
+        <div id="logocontainer"></div>
+        <h1>Our Logo</h1>
+        <div class="blog">
+            <img src="{{ url_for('static', filename='pif_logo.png') }}" alt="PIF Logo">
+            <div class="article">
+                <h2>Our Logo</h2>
+                <p>Proudly we present you our new logo</p>  
+        </div>
+        </div>
+        <br>
+        <div id="lgkcontainer"></div>
+        <h1>About the LGK</h1>
+        <div class="blog">
+            <img src="{{ url_for('static', filename='logo_lgk.png') }}" alt="LGK Logo">
+            <div class="article">
+                <h2>Lycee Guillaume Kroll</h2>
+                <p>Just another random school nothing special</p>  
+        </div>
+        </div>
+        <br>
+        <div id="lamcontainer"></div>
+        <h1>About the LAM</h1>
+        <div class="blog">
+            <img src="{{ url_for('static', filename='logo_lam.png') }}" alt="PIF Logo" style="background-color: white;">
+            <div class="article">
+                <h2>About the LAM</h2>
+                <p>Probably one of the best schools in Luxembourg, Feel free to change our mind and send us an eMail to: <a href="mailto:zerst078@school.lu">zerst078@school.lu</a></p>  
+        </div>
+        </div>
+    </main>
+</body>
+</html>
