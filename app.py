@@ -358,7 +358,7 @@ def main():
 
 	if Seite==7:       # Logo LGK 
 		draw.rectangle((0, 0, oled.width-1, oled.height-1), outline=1, fill=0)
-		logo = Image.open('/home/pi/Desktop/RaspiMacedoPIF/logoltam.png')
+		logo = Image.open('./logoltam.png')
 		draw.bitmap((1, 0), logo, fill=1)
 		
 	if Seite==8:    # Projektdaten  
